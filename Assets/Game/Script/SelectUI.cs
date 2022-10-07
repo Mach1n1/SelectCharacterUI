@@ -12,6 +12,7 @@ public class SelectUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _CharacterNameUI;
     private static int index;
     private int currentIndex;
+
     private void Start()
     {
         Instantiate(_AnimationPrefab[0], _CanvasParent);
@@ -20,8 +21,7 @@ public class SelectUI : MonoBehaviour
 
     public void StartCharacterAnimation(int number)
     {
-        
-        //It's not the best search
+        //it's not the best search, but that's the only way I can
         _OldAnimation = GameObject.FindGameObjectWithTag("DestroyCharacter");
         if (_OldAnimation != null) Destroy(_OldAnimation);
         Instantiate(_AnimationPrefab[number], _CanvasParent);
