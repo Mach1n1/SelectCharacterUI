@@ -22,7 +22,7 @@ public class SelectUI : MonoBehaviour
     {
         
         //It's not the best search
-        _OldAnimation = GameObject.FindGameObjectWithTag("DestroyMe");
+        _OldAnimation = GameObject.FindGameObjectWithTag("DestroyCharacter");
         if (_OldAnimation != null) Destroy(_OldAnimation);
         Instantiate(_AnimationPrefab[number], _CanvasParent);
         _CharacterNameUI.text = _characterName[number];
@@ -31,12 +31,10 @@ public class SelectUI : MonoBehaviour
 
     public void StartStandAnimation(int number)
     {
+        _OldAnimation = GameObject.FindGameObjectWithTag("DestroyStand");
+        if (_OldAnimation != null) Destroy(_OldAnimation);
         index = number;
-        //It's not the best search
-        //_OldAnimation = GameObject.FindGameObjectWithTag("DestroyMe");
-        //if (_OldAnimation != null) Destroy(_OldAnimation);
         Instantiate(_AnimationPrefab[number], _CanvasParent);
-        //_CharacterNameUI.text = _characterName[number];
     }
 
     public void CheckIconActive()

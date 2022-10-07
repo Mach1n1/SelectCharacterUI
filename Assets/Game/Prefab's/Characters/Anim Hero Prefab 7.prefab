@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 5947290213853887443}
   m_Layer: 5
   m_Name: Anim Hero Prefab 7
-  m_TagString: DestroyMe
+  m_TagString: DestroyCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
